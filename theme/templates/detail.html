@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Trang chủ{% endblock %}
+
+{% block content-left %}
+<div class="articles">
+{% for i in content %}
+    <div class="article-title">
+        <p>Bài viết gốc chi tiết tham khảo tại </p>
+        <a class="title" href="{{i.link}}">{{ i.link }}</a>
+    </div>
+    <div class="article-text">
+        <p>{{ i.noidung }}</p>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

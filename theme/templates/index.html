@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Trang chủ{% endblock %}
+
+{% block content-left %}
+<div class="slider">
+	<div class="articles">
+		<header>
+			<h3 class="title-head">Tin nổi bật</h3>
+					</header>
+		<div class="clearfix"></div>
+		<form action="/getdata/" method="post" style="padding-top:20px">
+		<p>Chọn ngày cần xem dữ liệu:
+			{% csrf_token %}
+			<input type="text" id="datepicker" name="datepicker1">
+			<input type="submit" value="Xem dữ liệu">
+		</p>
+		</form>
+		{% if content %}
+					{% for i in content %}
+					<div class="article">
+							<div class="article-title">
+								<p>{{ i.thoigianthucthi }}<a class="span_link" href="#"><span class="glyphicon glyphicon-comment"></span>0 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-eye-open"></span>104 </a><a class="span_link" href="#"><span class="glyphicon glyphicon-thumbs-up"></span>52</a></p>
+									<a class="title" href="/detail/{{i.id}}">{{ i.tieude }}</a>
+							</div>
+							<div class="article-text">
+								<p>{{ i.thoigianngaythang }}  {{ i.mieuta }}</p>
+
+								<div class="clearfix"></div>
+							</div>
+						<div class="clearfix"></div>
+					</div>
+					{% endfor %}
+		{% else %}
+			<h4>Không có dữ liệu này được chọn.</h4>
+		{% endif %}
+
+
+				</div>
+</div>
+{% endblock %}
+

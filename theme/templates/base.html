@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %} | Site tin tức Django</title>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Express News Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+{% block sitecss %}
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+   <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+{% endblock %}
+
+{% block sitejs %}
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- for bootstrap working -->
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+<!-- //for bootstrap working -->
+<!-- web-fonts -->
+	<script type="text/javascript" src="{% static 'js/jquery-1.12.4.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+	<script>
+		$(function () {
+		  $("#slider").responsiveSlides({
+			auto: true,
+			nav: true,
+			speed: 500,
+			namespace: "callbacks",
+			pager: true,
+		  });
+
+		  $("#datepicker").datepicker({
+    		beforeShow: function (input, inst) {
+        		setTimeout(function () {
+            		inst.dpDiv.css({
+                	top: $("#datepicker").offset().top + 35,
+                	left: $("#datepicker").offset().left
+            	});
+        	}, 0);
+			}
+			});
+		});
+
+	</script>
+
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+
+    <!--/script-->
+    <script type="text/javascript">
+                jQuery(document).ready(function($) {
+                    $(".scroll").click(function(event){
+                        event.preventDefault();
+                        $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+                    });
+                });
+    </script>
+{% endblock %}
+
+{% block extracss %}
+{% endblock %}
+
+{% block extrajs %}
+{% endblock %}
+</head>
+<body>
+	<div style="padding-top:30px !important;padding-right:30px !important;padding-left:30px !important;">
+        <table class="style1" cellpadding="0" cellspacing="0" style="width:100%;">
+            <tbody>
+                <tr>
+                    <td class="mid" style="width:137px">
+
+                    </td>
+                    <td class="mid-center">
+                        <div id="UpdatePanel2">
+                            <span id="Label1" style="display:inline-block;width:950px;color:purple !important;">CHI CỤC CNTT - NHNN VIỆT NAM</span>
+                        </div>
+                    </td>
+                    <td id="time" class="mid-tail">
+						{% now "d M, Y" %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	<!-- header-section-starts-here -->
+	<!--<div class="header">
+		<div class="header-bottom">
+			<div class="callbacks_wrap" align="center"></div>
+		<center>
+		<ul class="rslides" id="slider" >
+			<li>
+				<img src="{% static 'images/1.jpg' %}" alt="">
+			</li>
+			<li>
+				<img src="{% static 'images/2.jpg' %}" alt="">
+			</li>
+			<li>
+				<img src="{% static 'images/3.jpg' %}" alt="">
+			</li>
+		</ul>
+		</center>
+		</div>
+	</div>-->
+			<!--<div class="navigation">
+				<nav class="navbar navbar-default" role="navigation">
+		   <div class="wrap">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div>-->
+			<!--/.navbar-header-->
+
+			<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					 <li class="active"><a href="index.html">Trang chủ</a></li>
+				    <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Chức năng<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="entertainment.html">Export PDF</a></li>
+							<li class="divider"></li>
+							<li><a href="entertainment.html">Nhận mail thông báo</a></li>
+							<li class="divider"></li>
+						</ul>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+
+			</div>-->
+			<!--/.navbar-collapse-->
+	 <!--/.navbar-->
+		<!--	</div>
+		</nav>
+		</div>
+	</div>-->
+	<!-- header-section-ends-here -->
+	<div class="footer1">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="leffooter1"></td>
+				<td class="footer-tail1">
+					<marquee style="text-align: left;">
+                        <strong>
+                            <em>
+                                <span style="font-size: 20pt;color: yellow">
+                                    CHÀO MỪNG CÁC BẠN ĐẾN VỚI HỆ THỐNG TIN TỨC!!!
+                                </span>
+                            </em>
+                        </strong>
+                    </marquee>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!--<div class="wrap">
+		<div class="move-text">
+
+			<div class="marquee">
+				<div class="marquee1"><a class="breaking" href="single.html">>> Chào mừng các bạn đến hệ thống tin tức..</a></div>
+			</div>
+			<script type="text/javascript" src="{% static 'js/jquery.marquee.min.js' %}"></script>
+			<script>
+			  $('.marquee').marquee({ pauseOnHover: true });
+			  //@ sourceURL=pen.js
+			</script>
+		</div>
+	</div>-->
+	<!-- content-section-starts-here -->
+	<div class="main-body">
+		<div class="wrap">
+            {% block content %}
+			<div class="col-md-12 content-left">
+                {% block content-left %}
+                {% endblock %}
+            </div>
+            {% endblock content %}
+            {% block sidebar %}
+			<!--<div class="col-md-4 side-bar">
+                {% include 'sidebar.html' %}
+			</div>-->
+            {% endblock %}
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- content-section-ends-here -->
+	<!-- footer-section-starts-here -->
+	<div class="footer">
+
+		<div class="footer-bottom">
+			<div class="wrap">
+				<div class="copyrights col-md-6">
+					<p> © 2020 Phòng quản lý và phát triển ứng dụng | Thực hiện bởi  <a href="#"> BÙI QUANG ĐẠT</a></p>
+				</div>
+				<div class="footer-social-icons col-md-6">
+					<ul>
+						<li><a class="facebook" href="#"></a></li>
+						<li><a class="twitter" href="#"></a></li>
+						<li><a class="flickr" href="#"></a></li>
+						<li><a class="googleplus" href="#"></a></li>
+						<li><a class="dribbble" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- footer-section-ends-here -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				wrapID: 'toTop', // fading element id
+				wrapHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!---->
+</body>
+</html>
